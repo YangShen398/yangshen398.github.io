@@ -78,7 +78,7 @@ self.addEventListener('fetch', event => {
                 let responseToCache = response.clone();
 
                 caches.open(cacheName).then(cache => {
-                    /* console.log('[sw] Caching new resource: ' + event.request.url); */
+                    console.log('[sw] Caching new resource: ' + event.request.url);
                     cache.put(event.request, responseToCache);
                 });
 
